@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки - MoneyTracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Настройки</h1>
+            <a href="index.html" class="back-btn">← Назад</a>
+        </div>
+        <div class="settings-content">
+            <div class="settings-group">
+                <label for="telegram-token">Telegram Bot Token:</label>
+                <input type="password" id="telegram-token" placeholder="Введите токен бота">
+            </div>
+            <div class="settings-group">
+                <label for="telegram-chat-id">Telegram Chat ID:</label>
+                <input type="text" id="telegram-chat-id" placeholder="Введите ID чата">
+            </div>
+            <div class="settings-group">
+                <label>Отправка отчетов:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="send-daily"> Ежедневно</label>
+                    <label><input type="checkbox" id="send-weekly"> Еженедельно</label>
+                    <label><input type="checkbox" id="send-monthly"> Ежемесячно</label>
+                </div>
+            </div>
+            <div class="settings-group">
+                <button onclick="resetData()" class="reset-btn">Сбросить все данные</button>
+            </div>
+            <button onclick="saveSettings()" class="save-btn">Сохранить настройки</button>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>

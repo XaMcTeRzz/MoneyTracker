@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyTracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MoneyTracker</h1>
+            <a href="settings.html" class="settings-btn">⚙️</a>
+        </div>
+        <h1>MoneyTracker</h1>
+        <div class="input-section">
+            <input type="number" id="amount" placeholder="Сума">
+            <select id="type">
+                <option value="income">Доход</option>
+                <option value="expense">Расход</option>
+            </select>
+            <input type="text" id="description" placeholder="Описание">
+            <button onclick="addTransaction()">Добавить</button>
+        </div>
+        <div class="summary">
+            <div class="balance">Баланс: <span id="balance">0</span> грн</div>
+            <div class="income">Доходы: <span id="total-income">0</span> грн</div>
+            <div class="expense">Расходы: <span id="total-expense">0</span> грн</div>
+        </div>
+        <div class="filter-section">
+            <h2>Фильтр по датам</h2>
+            <div class="date-filters">
+                <label for="date-from">От:</label>
+                <input type="date" id="date-from">
+                <label for="date-to">До:</label>
+                <input type="date" id="date-to">
+                <button onclick="applyDateFilter()">Применить</button>
+                <button onclick="resetDateFilter()">Сбросить</button>
+            </div>
+        <div class="transactions">
+            <h2>История операций</h2>
+            <ul id="transaction-list"></ul>
+        </div>
+        <div class="report-section">
+            <h2>Отчеты</h2>
+            <button onclick="sendReport(7)">7 дней</button>
+            <button onclick="sendReport(14)">14 дней</button>
+            <button onclick="sendReport(30)">30 дней</button>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
