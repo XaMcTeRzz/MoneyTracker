@@ -207,6 +207,59 @@ h1 {
         display: block;
         margin: 10px auto;
     }
+    
+    /* Адаптация фильтра по датам для мобильных устройств */
+    .date-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .date-filters > * {
+        margin: 5px 0;
+    }
+    
+    .date-filters input[type="date"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .date-filters button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .input-section input,
+    .input-section select {
+        min-width: auto;
+    }
+    
+    .balance,
+    .income,
+    .expense {
+        min-width: auto;
+        padding: 15px;
+    }
+    
+    #transaction-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #transaction-list li .income-amount,
+    #transaction-list li .expense-amount {
+        margin-top: 10px;
+    }
 }
 
 .header {
